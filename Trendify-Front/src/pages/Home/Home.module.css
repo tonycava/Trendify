@@ -1,0 +1,73 @@
+#choose {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 4.5vmax;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.containerImg {
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    transition: transform 500ms ease-out;
+}
+
+.containerImg .img {
+    border-radius: 25px;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.container {
+    z-index: 100;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    grid-row-gap: 50px;
+}
+.container > * {
+    display: flex;
+    justify-content: center;
+}
+
+.containerImg:hover {
+    transform: scale(1.05);
+}
+
+.wrapContentInCentre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100vh;
+}
+
+canvas {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+
+.textBox {
+    z-index: 2;
+    font-size: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 7px;
+    word-spacing: 12px;
+    text-transform: uppercase;
+    color:rgb(238, 238, 238);
+}
+.heading {
+    text-align: center;
+}

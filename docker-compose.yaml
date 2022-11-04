@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  web:
+    build: Trendify-Front/.
+    container_name: trendify_front
+    ports:
+      - "8085:80"
+
+  back:
+    build: Trendify-Back/.
+    container_name: trendify_back
+    ports:
+      - "8086:3001"
+
+    depends_on:
+      - db
+
+  db:
+    restart: always
+    hostname: db
+    image: postgres
+    container_name: db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "8087:5432"
+
+    environment:
+      POSTGRES_USER: trendify
+      POSTGRES_PASSWORD: password
+
+
+volumes:
+  pgdata:

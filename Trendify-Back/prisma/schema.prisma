@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model TrendLive {
+ Id Int @id
+ SpecTop String
+ NameTop String
+ ImgTop String
+ UrlTopLive String
+ NameTopLive String
+ Trend Trend @relation(fields: [TrendId], references: [Id], onUpdate: Cascade, onDelete: Cascade)
+ TrendId Int
+}
+
+model Trend {
+ Id Int @id
+ Views String
+ Follow String
+ Category String
+ Tag String
+ TrendTopImg String
+ TrendLive TrendLive[]
+}

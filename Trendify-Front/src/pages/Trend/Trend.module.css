@@ -1,0 +1,10 @@
+#containerCard {
+    flex: 1;
+    padding-bottom: 25px;
+    grid-column: 2;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    place-items: center;
+}

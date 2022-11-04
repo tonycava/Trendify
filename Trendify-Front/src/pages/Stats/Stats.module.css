@@ -1,0 +1,24 @@
+#containerStats {
+    width: 100%;
+    display: grid;
+    margin-top: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-bottom: 20px;
+}
+
+.stats {
+    margin: 0 20%;
+    width: 60%;
+    gap: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-size: 3em;
+}
+
+.countView {
+    background-color: white;
+    border-radius: 20px;
+}

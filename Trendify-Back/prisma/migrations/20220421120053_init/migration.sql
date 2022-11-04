@@ -1,0 +1,8 @@
+-- CreateTable
+CREATE TABLE "TrendLive" (
+    "Id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "SpecTop" TEXT NOT NULL,
+    "NameTop" TEXT NOT NULL,
+    "TrendId" INTEGER NOT NULL,
+    CONSTRAINT "TrendLive_TrendId_fkey" FOREIGN KEY ("TrendId") REFERENCES "Trend" ("Id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
